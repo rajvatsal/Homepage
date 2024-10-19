@@ -1,0 +1,5 @@
+@import url("./utility.css");
+
+body > * {
+  padding-inline: var(--seperation-600);
+}

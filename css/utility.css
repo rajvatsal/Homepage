@@ -1,0 +1,95 @@
+@import url("../fonts/nunito-webfont/stylesheet.css");
+@import url("../fonts/latin-modern-roman/stylesheet.css");
+@import url("./background-pattern.css");
+
+:root {
+  --clr-primary: #3f3f3f;
+  --clr-secondary: white;
+  --clr-accent: purple;
+  --clr-semantic_valid: green;
+  --clr-semantic_invalid: red;
+  --clr-semantic_warning: orange;
+
+  --ff-heading-regular: "latin_modern_roman_caps10Rg", serif, monospace;
+
+  --ff-para-light: "nunitolight", sans-serif;
+  --ff-para-regular: "nunitoregular", sans-serif;
+  --ff-para-regular_italic: "nunitoregular_italic", sans-serif;
+  --ff-para-bold: "nunitobold", sans-serif;
+  --ff-para-bold_italic: "nunitobold_italic", sans-serif;
+
+  --seperation-600: 8px;
+}
+
+em,
+i {
+  font-family: var(--ff-para-regular_italic);
+}
+
+strong,
+b {
+  font-family: var(--ff-para-bold);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading-regular);
+}
+
+p,
+a,
+li {
+  font-family: var(--ff-para-regular);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
