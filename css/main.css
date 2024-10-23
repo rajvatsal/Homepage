@@ -1,5 +1,79 @@
 @import url("./utility.css");
 
-body > * {
-  padding-inline: var(--seperation-600);
+@media only screen and (max-width: 640px) {
+	.my-picture {
+		background-image: image-set(
+			"../pictures/side-profile/640px_wide/small.jpg",
+			"../pictures/side-profile/640px_wide/regular.jpg" 2x,
+			"../pictures/side-profile/640px_wide/large.jpg" 3x,
+			"../pictures/side-profile/640px_wide/original.jpg" 4x
+		);
+	}
+}
+
+main > section > * {
+	padding-inline: var(--seperation-600);
+}
+
+#about-me {
+	padding-top: 0.01px;
+	color: var(--clr-secondary);
+}
+
+.my-picture {
+	--image-ratio: 0.919;
+	--side-margins: 76px;
+	--correctness-value: calc(50px + 10.5vw);
+	margin: calc(30px + var(--seperation-600)) calc(var(--seperation-600) + 30px);
+	min-height: calc(
+		(100vw - var(--side-margins) + var(--correctness-value)) *
+		var(--image-ratio)
+	);
+	display: flex;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	z-index: 2;
+}
+
+.my-picture h2 {
+	--correctness-vw: 5vw;
+	--correctness-constant: 60px;
+	font-size: 3rem;
+	letter-spacing: -5px;
+	text-shadow: 3px 3px 5px black;
+	margin: auto 0px calc(var(--correctness-constant) - var(--correctness-vw)) 5px;
+	line-height: 1em;
+}
+
+.about-me__content {
+	--divider-height: 30vw;
+	background-color: var(--clr-secondary);
+	color: var(--clr-primary);
+	padding-block: 8px;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.about-me__content::before {
+	content: "";
+
+	position: absolute;
+	top: calc(var(--divider-height) * -1);
+	left: 0;
+
+	width: 100%;
+	height: var(--divider-height);
+
+	background-color: white;
+	mask-image: url("../pictures/divider-triangle.svg");
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+}
+
+.about-me__content h2 {
+	font-size: 2rem;
+	letter-spacing: -2px;
+	margin-block: 10px;
+	text-align: center;
 }

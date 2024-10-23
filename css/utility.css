@@ -11,24 +11,25 @@
   --clr-semantic_warning: orange;
 
   --ff-heading-regular: "latin_modern_roman_caps10Rg", serif, monospace;
+  --ff-heading-bold: "latin_modern_roman10_bold", serif, monospace;
 
-  --ff-para-light: "nunitolight", sans-serif;
-  --ff-para-regular: "nunitoregular", sans-serif;
-  --ff-para-regular_italic: "nunitoregular_italic", sans-serif;
-  --ff-para-bold: "nunitobold", sans-serif;
-  --ff-para-bold_italic: "nunitobold_italic", sans-serif;
+  --ff-txt-light: "nunitolight", sans-serif;
+  --ff-txt-regular: "nunitoregular", sans-serif;
+  --ff-txt-regular_italic: "nunitoregular_italic", sans-serif;
+  --ff-txt-bold: "nunitobold", sans-serif;
+  --ff-txt-bold_italic: "nunitobold_italic", sans-serif;
 
   --seperation-600: 8px;
 }
 
 em,
 i {
-  font-family: var(--ff-para-regular_italic);
+  font-family: var(--ff-txt-regular_italic);
 }
 
 strong,
 b {
-  font-family: var(--ff-para-bold);
+  font-family: var(--ff-txt-bold);
 }
 
 h1,
@@ -38,12 +39,13 @@ h4,
 h5,
 h6 {
   font-family: var(--ff-heading-regular);
+  text-transform: uppercase;
 }
 
 p,
 a,
 li {
-  font-family: var(--ff-para-regular);
+  font-family: var(--ff-txt-regular);
 }
 
 *,
