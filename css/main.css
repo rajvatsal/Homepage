@@ -22,27 +22,23 @@ main > section > * {
 
 .my-picture {
 	--image-ratio: 0.919;
-	--side-margins: 76px;
-	--correctness-value: calc(50px + 10.5vw);
-	margin: calc(30px + var(--seperation-600)) calc(var(--seperation-600) + 30px);
-	min-height: calc(
-		(100vw - var(--side-margins) + var(--correctness-value)) *
-		var(--image-ratio)
-	);
+	--mrg: calc(15px + var(--seperation-600));
+
+	margin: var(--mrg) var(--mrg) 20px;
+	min-height: calc((100vw - (var(--mrg) * 2)) / var(--image-ratio));
 	display: flex;
 	background-repeat: no-repeat;
 	background-size: contain;
 	position: relative;
 	z-index: 2;
+	box-shadow: 5px 5px 30px hsla(0, 0%, 3.5%, 0.45);
 }
 
 .my-picture h2 {
-	--correctness-vw: 5vw;
-	--correctness-constant: 60px;
 	font-size: 3rem;
 	letter-spacing: -5px;
 	text-shadow: 3px 3px 5px black;
-	margin: auto 0px calc(var(--correctness-constant) - var(--correctness-vw)) 5px;
+	margin: auto 0px 10px 5px;
 	line-height: 1em;
 }
 
