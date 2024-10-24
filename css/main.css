@@ -24,7 +24,7 @@ main > section > * {
 	--image-ratio: 0.919;
 	--mrg: calc(15px + var(--seperation-600));
 
-	margin: var(--mrg) var(--mrg) 20px;
+	margin: var(--mrg) var(--mrg) 0px;
 	min-height: calc((100vw - (var(--mrg) * 2)) / var(--image-ratio));
 	display: flex;
 	background-repeat: no-repeat;
