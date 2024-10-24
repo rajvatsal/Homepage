@@ -28,7 +28,7 @@ main > section > * {
 	min-height: calc((100vw - (var(--mrg) * 2)) / var(--image-ratio));
 	display: flex;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 100% auto;
 	position: relative;
 	z-index: 2;
 	box-shadow: 5px 5px 30px hsla(0, 0%, 3.5%, 0.45);
