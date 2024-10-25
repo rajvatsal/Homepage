@@ -74,23 +74,16 @@ main > section > * {
 }
 
 .about-me__content__socials {
-	margin-top: 15px;
-	display: flex;
-	justify-content: center;
-	gap: 5px;
-}
+	text-align: center;
+	margin-top: 19px;
 
-.about-me__content__socials a svg {
-	width: 2rem;
-	height: auto;
-	fill: black;
-}
+	& a {
+		text-decoration: none;
+	}
 
-.about-me__content__socials a:hover {
-	transform: scale(1.09);
-}
-
-.about-me__content__socials a {
-	text-decoration: none;
-	transition: transform 40ms;
+	& i {
+		display: inline-block;
+		color: black;
+		font-size: 2rem;
+	}
 }
