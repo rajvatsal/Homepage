@@ -31,21 +31,25 @@ main > section > * {
 	background-size: 100% auto;
 	position: relative;
 	z-index: 2;
-	box-shadow: 5px 5px 10px hsla(0, 0%, 12.5%, 0.26);
+	box-shadow: 0px 0px 20px hsla(0, 0%, 12.5%, 0.26);
+
+	h2 {
+		font-size: 3rem;
+		letter-spacing: -5px;
+		text-shadow: 3px 3px 5px black;
+		margin: auto 0px 10px 5px;
+		line-height: 1em;
+		color: var(--clr-secondary);
+	}
 }
 
-.my-picture h2 {
-	font-size: 3rem;
-	letter-spacing: -5px;
-	text-shadow: 3px 3px 5px black;
-	margin: auto 0px 10px 5px;
-	line-height: 1em;
+.about-me__content:not(h2) {
+	color: var(--clr-primary-300);
 }
 
 .about-me__content {
 	--divider-height: 30vw;
 	background-color: var(--clr-secondary);
-	color: var(--clr-primary);
 	padding-block: 8px;
 	position: relative;
 }

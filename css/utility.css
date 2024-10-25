@@ -3,33 +3,34 @@
 @import url("./background-pattern.css");
 
 :root {
-  --clr-primary: #3f3f3f;
-  --clr-secondary: white;
-  --clr-accent: purple;
-  --clr-semantic_valid: green;
-  --clr-semantic_invalid: red;
-  --clr-semantic_warning: orange;
+	--clr-primary-400: black;
+	--clr-primary-300: #515151;
+	--clr-secondary: white;
+	--clr-accent: purple;
+	--clr-semantic_valid: green;
+	--clr-semantic_invalid: red;
+	--clr-semantic_warning: orange;
 
-  --ff-heading-regular: "latin_modern_roman_caps10Rg", serif, monospace;
-  --ff-heading-bold: "latin_modern_roman10_bold", serif, monospace;
+	--ff-heading-regular: "latin_modern_roman_caps10Rg", serif, monospace;
+	--ff-heading-bold: "latin_modern_roman10_bold", serif, monospace;
 
-  --ff-txt-light: "nunitolight", sans-serif;
-  --ff-txt-regular: "nunitoregular", sans-serif;
-  --ff-txt-regular_italic: "nunitoregular_italic", sans-serif;
-  --ff-txt-bold: "nunitobold", sans-serif;
-  --ff-txt-bold_italic: "nunitobold_italic", sans-serif;
+	--ff-txt-light: "nunitolight", sans-serif;
+	--ff-txt-regular: "nunitoregular", sans-serif;
+	--ff-txt-regular_italic: "nunitoregular_italic", sans-serif;
+	--ff-txt-bold: "nunitobold", sans-serif;
+	--ff-txt-bold_italic: "nunitobold_italic", sans-serif;
 
-  --seperation-600: 8px;
+	--seperation-600: 8px;
 }
 
 em,
 i {
-  font-family: var(--ff-txt-regular_italic);
+	font-family: var(--ff-txt-regular_italic);
 }
 
 strong,
 b {
-  font-family: var(--ff-txt-bold);
+	font-family: var(--ff-txt-bold);
 }
 
 h1,
@@ -38,31 +39,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--ff-heading-regular);
-  text-transform: uppercase;
+	font-family: var(--ff-heading-regular);
+	text-transform: uppercase;
+	color: var(--clr-primary-400);
 }
 
 p,
 a,
 li {
-  font-family: var(--ff-txt-regular);
+	font-family: var(--ff-txt-regular);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  font-weight: normal;
-  font-style: normal;
+	margin: 0;
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-  line-height: 1.3;
-  -webkit-font-smoothing: antialiased;
+	line-height: 1.3;
+	-webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -70,15 +72,15 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 p,
@@ -88,10 +90,10 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 #root,
 #__next {
-  isolation: isolate;
+	isolation: isolate;
 }
