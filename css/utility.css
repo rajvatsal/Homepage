@@ -20,6 +20,10 @@
 	--ff-txt-bold: "nunitobold", sans-serif;
 	--ff-txt-bold_italic: "nunitobold_italic", sans-serif;
 
+	--fs-400: 1rem;
+	--fs-300: 0.875rem;
+	--fs-100: 0.75rem;
+
 	--seperation-600: 8px;
 }
 

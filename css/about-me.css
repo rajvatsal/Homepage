@@ -1,0 +1,76 @@
+#about-me {
+	padding-top: 0.01px;
+	color: var(--clr-secondary);
+}
+
+.my-picture {
+	--image-ratio: 0.919;
+	--mrg: calc(15px + var(--seperation-600));
+
+	margin: var(--mrg) var(--mrg) 0px;
+	min-height: calc((100vw - (var(--mrg) * 2)) / var(--image-ratio));
+	display: flex;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	position: relative;
+	z-index: 2;
+	box-shadow: 0px 0px 20px hsla(0, 0%, 12.5%, 0.26);
+
+	h2 {
+		font-size: 3rem;
+		letter-spacing: -5px;
+		text-shadow: 3px 3px 5px black;
+		margin: auto 0px 10px 5px;
+		line-height: 1em;
+		color: var(--clr-secondary);
+	}
+}
+
+.about-me__content:not(h2) {
+	color: var(--clr-primary-300);
+}
+
+.about-me__content {
+	--divider-height: 30vw;
+	background-color: var(--clr-secondary);
+	padding-block: 8px;
+	position: relative;
+}
+
+.about-me__content::before {
+	content: "";
+
+	position: absolute;
+	top: calc(var(--divider-height) * -1);
+	left: 0;
+
+	width: 100%;
+	height: var(--divider-height);
+
+	background-color: white;
+	mask-image: url("../pictures/divider-triangle.svg");
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+}
+
+.about-me__content h2 {
+	font-size: 2rem;
+	letter-spacing: -2px;
+	margin-block: 10px;
+	text-align: center;
+}
+
+.about-me__content__socials {
+	text-align: center;
+	margin-top: 19px;
+
+	& a {
+		text-decoration: none;
+	}
+
+	& i {
+		display: inline-block;
+		color: black;
+		font-size: 2rem;
+	}
+}

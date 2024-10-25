@@ -1,0 +1,44 @@
+#my-work {
+	--brd-project: solid 2px black;
+
+	margin-top: 50px;
+	height: 100px;
+}
+
+.heading {
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: -2px;
+}
+
+.project.battleship > img {
+	object-position: center top;
+}
+
+.project {
+	display: grid;
+	grid-template: 5fr 1fr / 1fr;
+	width: 100%;
+	min-height: 300px;
+	border: var(--brd-project);
+
+	img {
+		object-fit: cover;
+	}
+
+	.__details {
+		display: grid;
+		grid-auto-row: 1fr;
+		grid-template: repeat(2, 1fr) / 1fr repeat(2, 20px);
+		align-items: center;
+		gap: 3px;
+		border-top: var(--brd-project);
+
+		p {
+			grid-column: 1 / -1;
+			align-self: flex-start;
+			color: var(--clr-primary-300);
+			font-size: var(--fs-300);
+		}
+	}
+}
