@@ -1,44 +1,60 @@
 #my-work {
-	--brd-project: solid 2px black;
+	--brd-project: solid 1px black;
 
 	margin-top: 50px;
 	height: 100px;
+}
+
+.my-work__projects {
+	display: flex;
+	/* flex-wrap: wrap; */
+	gap: 50px;
 }
 
 .heading {
 	text-align: center;
 	font-size: 2rem;
 	letter-spacing: -2px;
-}
-
-.project.battleship > img {
-	object-position: center top;
+	margin-bottom: 25px;
 }
 
 .project {
-	display: grid;
-	grid-template: 5fr 1fr / 1fr;
-	width: 100%;
-	min-height: 300px;
-	border: var(--brd-project);
+	--icn-link-width: 20px;
+	--pd: 15px;
 
-	img {
-		object-fit: cover;
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-template: 5fr repeat(2, auto) / 1fr repeat(2, var(--icn-link-width));
+	column-gap: 5px;
+	width: 100%;
+	border: var(--brd-project);
+	padding: var(--pd) var(--pd);
+
+	& .__name {
+		margin-block: 10px;
 	}
 
-	.__details {
-		display: grid;
-		grid-auto-row: 1fr;
-		grid-template: repeat(2, 1fr) / 1fr repeat(2, 20px);
-		align-items: center;
-		gap: 3px;
-		border-top: var(--brd-project);
+	& .__link {
+		align-self: center;
+	}
 
-		p {
-			grid-column: 1 / -1;
-			align-self: flex-start;
-			color: var(--clr-primary-300);
-			font-size: var(--fs-300);
+	& .__screenshot {
+		object-fit: cover;
+		height: 100%;
+		grid-column: 1 / -1;
+		border-bottom: solid 1px black;
+		padding-bottom: 5px;
+	}
+
+	& .__description {
+		grid-column: 1 / -1;
+		color: var(--clr-primary-300);
+		font-size: var(--fs-300);
+	}
+
+	&.battleship {
+		.screenshot {
+			object-position: center top;
 		}
 	}
 }

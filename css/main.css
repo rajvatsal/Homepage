@@ -16,3 +16,7 @@
 main > section > * {
 	padding-inline: var(--seperation-600);
 }
+
+img.icons {
+	aspect-ratio: 1 / 1;
+}
