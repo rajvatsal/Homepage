@@ -2,17 +2,6 @@
 @import url("./about-me.css");
 @import url("./my-projects.css");
 
-@media only screen and (max-width: 640px) {
-	.my-picture {
-		background-image: image-set(
-			"../pictures/side-profile/640px_wide/small.jpg",
-			"../pictures/side-profile/640px_wide/regular.jpg" 2x,
-			"../pictures/side-profile/640px_wide/large.jpg" 3x,
-			"../pictures/side-profile/640px_wide/original.jpg" 4x
-		);
-	}
-}
-
 main > section > * {
 	padding-inline: var(--seperation-600);
 }

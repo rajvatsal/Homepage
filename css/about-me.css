@@ -15,8 +15,14 @@
 	position: relative;
 	z-index: 2;
 	box-shadow: 0px 0px 20px hsla(0, 0%, 12.5%, 0.26);
+	background-image: image-set(
+		"../pictures/side-profile/640px_wide/small.webp",
+		"../pictures/side-profile/640px_wide/regular.webp" 2x,
+		"../pictures/side-profile/640px_wide/large.webp" 3x,
+		"../pictures/side-profile/640px_wide/original.webp" 4x
+	);
 
-	h2 {
+	& h2 {
 		font-size: 3rem;
 		letter-spacing: -5px;
 		text-shadow: 3px 3px 5px black;

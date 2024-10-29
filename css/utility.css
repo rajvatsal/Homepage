@@ -3,6 +3,9 @@
 @import url("./background-pattern.css");
 
 :root {
+	/************************
+	 * COLOR
+	 ************************/
 	--clr-primary-400: black;
 	--clr-primary-300: #515151;
 	--clr-secondary: white;
@@ -11,6 +14,9 @@
 	--clr-semantic_invalid: red;
 	--clr-semantic_warning: orange;
 
+	/************************
+	 * FONT FAMILY
+	 ************************/
 	--ff-heading-regular: "latin_modern_roman_caps10Rg", serif, monospace;
 	--ff-heading-bold: "latin_modern_roman10_bold", serif, monospace;
 
@@ -20,11 +26,22 @@
 	--ff-txt-bold: "nunitobold", sans-serif;
 	--ff-txt-bold_italic: "nunitobold_italic", sans-serif;
 
+	/************************
+	 * FONT SIZE
+	 ************************/
 	--fs-400: 1rem;
 	--fs-300: 0.875rem;
 	--fs-100: 0.75rem;
 
 	--seperation-600: 8px;
+
+	/************************
+	 * SCREEN WIDTH
+	 ************************/
+	--sw-small-max: 600px;
+	--sw-regular-min: 601px;
+	--sw-regular-max: 1200px;
+	--sw-large-min: 1201px;
 }
 
 em,
