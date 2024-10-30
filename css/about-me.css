@@ -4,7 +4,7 @@
 }
 
 .my-picture {
-	--image-ratio: 0.919;
+	--image-ratio: 0.929;
 	--mrg: calc(15px + var(--seperation-600));
 
 	margin: var(--mrg) var(--mrg) 0px;
@@ -43,7 +43,7 @@
 }
 
 .about-me__content::before {
-	--divider-height: 290px;
+	--divider-height: 260px;
 	content: "";
 
 	position: absolute;
