@@ -1,5 +1,5 @@
 #my-work {
-	--brd-project: solid 1px black;
+	--brd-project: solid 1px #888787;
 
 	margin-top: 50px;
 	height: 100px;
@@ -21,16 +21,19 @@
 
 .project {
 	--icn-link-width: 20px;
-	--pd: 15px;
+	--pd: 10px;
 
 	display: grid;
 	grid-auto-rows: max-content;
-	grid-auto-columns: max-content;
-	grid-template: 5fr repeat(2, auto) / 1fr repeat(2, var(--icn-link-width));
-	column-gap: 5px;
-	width: 100%;
+	grid-template: 1fr auto / 1fr;
 	border: var(--brd-project);
-	padding: var(--pd);
+
+	& .__details {
+		display: grid;
+		grid-template: 1fr / 1fr repeat(2, var(--icn-link-width));
+		padding: 0px var(--pd) var(--pd);
+		column-gap: 5px;
+	}
 
 	& .__name {
 		margin-block: 10px;
@@ -41,15 +44,14 @@
 	}
 
 	& .__screenshot {
-		grid-column: 1 / -1;
-		border-bottom: solid 1px black;
-		padding-bottom: 5px;
+		border-bottom: var(--brd-project);
+		padding: 5px;
 		aspect-ratio: 17 / 9;
 	}
 
 	& img.__screenshot {
-		height: 100%;
 		object-fit: cover;
+		width: 100%;
 	}
 
 	& .__screenshot img {
