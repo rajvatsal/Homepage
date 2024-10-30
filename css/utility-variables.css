@@ -6,13 +6,24 @@
 	/************************
 	 * COLOR
 	 ************************/
-	--clr-primary-400: black;
-	--clr-primary-300: #515151;
-	--clr-secondary: white;
-	--clr-accent: purple;
+	--clr-blue: #0000ff1f;
+	--clr-red: #ff00008a;
+	--clr-neutral-100: white;
+	--clr-neutral-110: #00000052;
+	--clr-neutral-200: #eaeaea;
+	--clr-neutral-600: #515151;
+	--clr-neutral-700: #3f3f3f;
+	--clr-neutral-800: black;
+	--clr-accent-400: var(--clr-red);
+	--clr-accent-500: var(--clr-blue);
 	--clr-semantic_valid: green;
 	--clr-semantic_invalid: red;
 	--clr-semantic_warning: orange;
+
+	--bg-image-accent: linear-gradient(
+		var(--clr-accent-500),
+		var(--clr-accent-400)
+	);
 
 	/************************
 	 * FONT FAMILY

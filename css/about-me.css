@@ -1,6 +1,5 @@
 #about-me {
 	padding-top: 0.01px;
-	color: var(--clr-secondary);
 }
 
 .my-picture {
@@ -28,16 +27,16 @@
 		text-shadow: 3px 3px 5px black;
 		margin: auto 0px 10px 5px;
 		line-height: 1em;
-		color: var(--clr-secondary);
+		color: var(--clr-neutral-200);
 	}
 }
 
-.about-me__content:not(h2) {
-	color: var(--clr-primary-300);
+.about-me__content p {
+	color: var(--clr-neutral-600);
 }
 
 .about-me__content {
-	background-color: var(--clr-secondary);
+	background-color: var(--clr-neutral-200);
 	padding-block: 8px;
 	position: relative;
 }
@@ -53,7 +52,7 @@
 	width: 100%;
 	height: var(--divider-height);
 
-	background-color: white;
+	background-color: var(--clr-neutral-200);
 	mask-image: url("../pictures/divider-triangle.svg");
 	mask-repeat: no-repeat;
 	mask-size: 100% 100%;
@@ -69,14 +68,4 @@
 .about-me__content__socials {
 	text-align: center;
 	margin-top: 19px;
-
-	& a {
-		text-decoration: none;
-	}
-
-	& i {
-		display: inline-block;
-		color: black;
-		font-size: 2rem;
-	}
 }
