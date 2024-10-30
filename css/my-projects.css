@@ -35,6 +35,7 @@
 		grid-template: 1fr / 1fr repeat(2, var(--icn-link-width));
 		padding: 0px var(--pd) var(--pd);
 		column-gap: 5px;
+		margin-top: 10px;
 	}
 
 	& .__name {
