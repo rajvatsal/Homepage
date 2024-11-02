@@ -39,6 +39,7 @@
 	}
 
 	& .__name {
+		font-size: var(--fs-400);
 	}
 
 	& .__link {
