@@ -17,7 +17,8 @@
 	background-image: image-set(
 		"../assets/600x/side-profile_small.webp",
 		"../assets/1280x/side-profile_small.webp" 2x,
-		"../assets/1920x/side-profile_small.webp" 3x,
+		"../assets/1280x/side-profile_small.webp" 3x,
+		"../assets/1920x/side-profile_small.webp" 3.5x,
 		"../assets/4000x/side-profile_small.webp" 4x
 	);
 
