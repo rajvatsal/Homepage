@@ -26,7 +26,7 @@
   );
 
   & h2 {
-    font-size: 3rem;
+    font-size: var(--fs-750);
     letter-spacing: -5px;
     text-shadow: 3px 3px 5px black;
     margin: auto 0px 10px 5px;
@@ -63,7 +63,7 @@
 }
 
 .about-me__content h2 {
-  font-size: 2rem;
+  font-size: var(--fs-600);
   letter-spacing: -2px;
   margin-block: 10px;
   text-align: center;
@@ -78,7 +78,7 @@
   #about-me {
     --picture-offset: 70px;
     --picture-top-offset: 7px;
-    --img-width: calc(45vw - 1px); /* to fit image perfectly inside container */
+    --img-width: calc(40vw - 1px); /* to fit image perfectly inside container */
     --pd-block: 100px;
     --mrg-inline-content: var(--seperation-700);
     --mrg: 0px;

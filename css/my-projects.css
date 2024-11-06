@@ -15,7 +15,7 @@
 
 .heading {
 	text-align: center;
-	font-size: 2rem;
+	font-size: var(--fs-600);
 	letter-spacing: -2px;
 	margin-bottom: 15px;
 }
