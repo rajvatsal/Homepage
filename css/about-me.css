@@ -13,7 +13,7 @@
   width: var(--img-width);
   display: flex;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   position: relative;
   z-index: 2;
   box-shadow: 0px 0px 20px black;
@@ -74,20 +74,31 @@
   margin-top: 19px;
 }
 
-@media only screen and (600px < width < 1201px) {
+@media only screen and (min-width: 601px) {
   #about-me {
     --picture-offset: 70px;
     --picture-top-offset: 7px;
-    --img-width: calc(40vw - 1px); /* to fit image perfectly inside container */
-    --pd-block: 100px;
+    --img-width: 42vw;
+    --ds-about-me: 100px; /* divistion about me */
     --mrg-inline-content: var(--seperation-700);
     --mrg: 0px;
+    --triangle-btm-pad: 200px;
+    --clr-triangle: var(--clr-neutral-200);
     position: relative;
-    padding-block: var(--pd-block);
+    padding-block: var(--ds-about-me);
 
     & .socials {
       display: none;
     }
+  }
+
+  #about-me::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: var(--triangle-btm-pad);
+    width: 100vw;
+    background-color: var(--clr-triangle);
   }
 
   #about-me::after {
@@ -95,13 +106,13 @@
     content: "";
 
     position: absolute;
-    bottom: 0px;
+    bottom: var(--triangle-btm-pad);
     left: 0px;
 
     width: 100vw;
     height: var(--divider-height);
 
-    background-color: var(--clr-neutral-200);
+    background-color: var(--clr-triangle);
     mask-image: url("../assets/divider-triangle.svg");
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
@@ -119,7 +130,6 @@
         var(--picture-top-offset) * 3 + var(--picture-pad-bottom)
     );
     float: left;
-    margin-right: 10px;
     position: static;
     background-color: transparent;
   }
@@ -127,8 +137,8 @@
   .about-me__content {
     margin-inline: var(--mrg-inline-content);
     box-shadow: 10px 10px 10px black;
-    padding-block: 6rem;
-    padding-inline: 2rem 3rem;
+    padding-block: 6rem 5rem;
+    padding-inline: 2rem;
     z-index: 1;
   }
 
@@ -138,7 +148,7 @@
     z-index: 3;
     left: calc(var(--mrg-inline-content) - var(--picture-offset) + 40px);
     top: calc(
-      var(--pd-block) + var(--picture-top-offset) - var(--picture-offset)
+      var(--ds-about-me) + var(--picture-top-offset) - var(--picture-offset)
     );
     box-shadow: 0px 0px 10px #00000085;
 
