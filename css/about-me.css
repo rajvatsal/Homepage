@@ -120,7 +120,7 @@
 
   .about-me__content::before {
     --picture-pad-right: 22px;
-    --picture-pad-bottom: 10px;
+    --picture-pad-bottom: 3px;
     content: "";
     width: calc(
       var(--img-width) - var(--picture-offset) + var(--picture-pad-right)
@@ -138,7 +138,7 @@
     margin-inline: var(--mrg-inline-content);
     box-shadow: 10px 10px 10px black;
     padding-block: 6rem 5rem;
-    padding-inline: 2rem;
+    padding-inline: 2rem 0.875rem;
     z-index: 1;
   }
 
