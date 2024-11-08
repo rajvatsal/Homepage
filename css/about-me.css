@@ -76,14 +76,31 @@
 
 @media only screen and (min-width: 601px) {
   #about-me {
+    --ds-about-me: 100px; /* divistion about me */
+
     --picture-offset: 70px;
     --picture-top-offset: 7px;
+    --picture-position-top: calc(
+      var(--ds-about-me) + var(--picture-top-offset) - var(--picture-offset)
+    );
+
+    /* change pre-defined variables for current screen */
     --img-width: 42vw;
-    --ds-about-me: 100px; /* divistion about me */
-    --mrg-inline-content: var(--seperation-700);
     --mrg: 0px;
-    --triangle-btm-pad: 200px;
-    --clr-triangle: var(--clr-neutral-200);
+
+    --about-me__content-mrg-inline: var(--seperation-700);
+    --about-me__content-pdt: 6rem; /* padding top content */
+    --about-me__content-before-ht: calc(
+      var(--img-height) -
+        (
+          var(--about-me__content-pdt) + var(--ds-about-me) -
+            var(--picture-position-top)
+        )
+    );
+
+    --triangle-pdb: 200px; /* padding bottom */
+    --triangle-clr: var(--clr-neutral-200);
+
     position: relative;
     padding-block: var(--ds-about-me);
 
@@ -96,9 +113,9 @@
     content: "";
     position: absolute;
     bottom: 0px;
-    height: var(--triangle-btm-pad);
+    height: var(--triangle-pdb);
     width: 100vw;
-    background-color: var(--clr-triangle);
+    background-color: var(--triangle-clr);
   }
 
   #about-me::after {
@@ -106,13 +123,13 @@
     content: "";
 
     position: absolute;
-    bottom: var(--triangle-btm-pad);
+    bottom: var(--triangle-pdb);
     left: 0px;
 
     width: 100vw;
     height: var(--divider-height);
 
-    background-color: var(--clr-triangle);
+    background-color: var(--triangle-clr);
     mask-image: url("../assets/divider-triangle.svg");
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
@@ -120,24 +137,20 @@
 
   .about-me__content::before {
     --picture-pad-right: 22px;
-    --picture-pad-bottom: 3px;
     content: "";
     width: calc(
       var(--img-width) - var(--picture-offset) + var(--picture-pad-right)
     );
-    height: calc(
-      var(--img-height) - (var(--picture-offset) * 2) -
-        var(--picture-top-offset) * 3 + var(--picture-pad-bottom)
-    );
+    height: var(--about-me__content-before-ht);
     float: left;
     position: static;
     background-color: transparent;
   }
 
   .about-me__content {
-    margin-inline: var(--mrg-inline-content);
+    margin-inline: var(--about-me__content-mrg-inline);
     box-shadow: 10px 10px 10px black;
-    padding-block: 6rem 5rem;
+    padding-block: var(--about-me__content-pdt) 5rem;
     padding-inline: 2rem 0.875rem;
     z-index: 1;
   }
@@ -146,10 +159,10 @@
     --size-factor: 150px;
     position: absolute;
     z-index: 3;
-    left: calc(var(--mrg-inline-content) - var(--picture-offset) + 40px);
-    top: calc(
-      var(--ds-about-me) + var(--picture-top-offset) - var(--picture-offset)
+    left: calc(
+      var(--about-me__content-mrg-inline) - var(--picture-offset) + 40px
     );
+    top: var(--picture-position-top);
     box-shadow: 0px 0px 10px #00000085;
 
     & h2 {
