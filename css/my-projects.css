@@ -76,3 +76,26 @@
 		width: 100%;
 	}
 }
+
+@media only screen and (min-width: 601px) {
+	#my-work {
+		margin-inline: var(--seperation-700);
+
+		& h2 {
+			text-align: left;
+		}
+
+		& .my-work__projects {
+			grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+			column-gap: 30px;
+
+			& .project--battleship .__screenshot {
+				object-position: left top;
+			}
+		}
+	}
+
+	#my-work > * {
+		padding-inline: 0px;
+	}
+}

@@ -172,46 +172,4 @@
       );
     }
   }
-
-  #my-work {
-    margin-inline: var(--seperation-700);
-
-    & h2 {
-      text-align: left;
-    }
-
-    & .my-work__projects {
-      grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
-      column-gap: 30px;
-
-      & .project--battleship .__screenshot {
-        object-position: left top;
-      }
-    }
-  }
-
-  #my-work > * {
-    padding-inline: 0px;
-  }
-
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 500px;
-    padding-top: 0px !important;
-
-    & .footer__contact {
-      & .__heading,
-      & .__socials--footer {
-        text-align: left !important;
-      }
-    }
-
-    & .__picture {
-      margin-top: 0px !important; /* overwrite previous rule */
-      margin-right: var(--seperation-600);
-      flex: 0 1 23%;
-    }
-  }
 }

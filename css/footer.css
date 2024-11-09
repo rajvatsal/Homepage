@@ -43,3 +43,26 @@ footer {
 footer > *:not(.__picture) {
 	padding-inline: var(--seperation-600);
 }
+
+@media only screen and (min-width: 601px) {
+	footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 500px;
+		padding-top: 0px !important;
+
+		& .footer__contact {
+			& .__heading,
+			& .__socials--footer {
+				text-align: left !important;
+			}
+		}
+
+		& .__picture {
+			margin-top: 0px !important; /* overwrite previous rule */
+			margin-right: var(--seperation-600);
+			flex: 0 1 23%;
+		}
+	}
+}
