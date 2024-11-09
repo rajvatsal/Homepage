@@ -57,12 +57,16 @@ footer > *:not(.__picture) {
 			& .__socials--footer {
 				text-align: left !important;
 			}
+
+			flex: 1 1 auto;
 		}
 
 		& .__picture {
 			margin-top: 0px !important; /* overwrite previous rule */
 			margin-right: var(--seperation-600);
-			flex: 0 1 23%;
+			flex: 0 0 300px;
+			width: 1px;
+			object-fit: cover;
 		}
 	}
 }

@@ -164,6 +164,11 @@
     );
     top: var(--picture-position-top);
     box-shadow: 0px 0px 10px #00000085;
+    background-image: image-set(
+      "../assets/1280x/side-profile_small.webp" 1x,
+      "../assets/1920x/side-profile_small.webp" 2x,
+      "../assets/4000x/side-profile_small.webp" 3x
+    );
 
     & h2 {
       transform: translate(
