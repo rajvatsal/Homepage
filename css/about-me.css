@@ -80,6 +80,7 @@
 
     --picture-offset: 70px;
     --picture-top-offset: -17px;
+    --picture-pad-right: 22px;
     --picture-position-top: calc(
       var(--ds-about-me) + var(--picture-top-offset) - var(--picture-offset)
     );
@@ -96,6 +97,9 @@
           var(--about-me__content-pdt) + var(--ds-about-me) -
             var(--picture-position-top)
         )
+    );
+    --about-me__content-before-wd: calc(
+      var(--img-width) - var(--picture-offset) + var(--picture-pad-right)
     );
 
     --triangle-pdb: 200px; /* padding bottom */
@@ -136,11 +140,8 @@
   }
 
   .about-me__content::before {
-    --picture-pad-right: 22px;
     content: "";
-    width: calc(
-      var(--img-width) - var(--picture-offset) + var(--picture-pad-right)
-    );
+    width: var(--about-me__content-before-wd);
     height: var(--about-me__content-before-ht);
     float: left;
     position: static;
@@ -185,5 +186,62 @@
       margin-bottom: 0px;
       font-size: var(--fs-800);
     }
+  }
+}
+
+@media only screen and (min-width: 1101px) {
+  #about-me {
+    --img-width: 424px;
+    --picture-top-offset: 12px;
+    --ds-about-me: 120px;
+    --wid-page: 964px;
+    --triangle-pdb: 20px;
+  }
+
+  .my-picture {
+    left: calc((100vw - var(--wid-page)) / 2);
+
+    & h2 {
+      transform: none;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      font-size: var(--fs-900);
+      letter-spacing: -8px;
+    }
+  }
+
+  .about-me__content {
+    padding-right: 2rem;
+    padding-block: 0;
+    max-width: var(--wid-page);
+    margin-inline: auto;
+
+    & h2 {
+      text-align: left;
+      padding-block: 2.2rem;
+      margin-block: 0;
+      font-size: var(--fs-650);
+    }
+
+    & p {
+      line-height: 1.3em;
+    }
+
+    & div.socials.about-me__content__socials {
+      display: block !important;
+      text-align: right !important;
+      padding-block: 1rem;
+
+      & i {
+        font-size: var(--fs-600);
+        color: var(--clr-neutral-800);
+      }
+    }
+  }
+
+  .about-me__content::before {
+    width: calc(
+      var(--about-me__content-before-wd) + var(--picture-offset) - 2rem
+    );
   }
 }

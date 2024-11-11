@@ -70,3 +70,20 @@ footer > *:not(.__picture) {
 		}
 	}
 }
+
+@media only screen and (min-width: 1101px) {
+	footer {
+		display: grid;
+		grid-template: 1fr / 1fr calc(var(--wid-page) - 300px) 300px 1fr;
+	}
+
+	& .footer__contact {
+		grid-column: 2 / 3;
+	}
+
+	& .__picture {
+		grid-column: 3 / 4;
+		width: 100% !important;
+		margin-right: 0px;
+	}
+}
